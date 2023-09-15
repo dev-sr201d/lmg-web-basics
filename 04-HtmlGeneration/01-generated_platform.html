@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Generated Platform</title>
+    <link rel="stylesheet" type="text/css" href="styles/platform.css">
+    <script type="text/javascript">
+        // ##### Initialization #####
+
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            addGroundPlatformGroup(0, 20);
+        }
+
+        // ##### Platform Placement #####
+
+        function addGroundPlatformGroup(offsetLeft, numberOfElements) {
+            const platformWidth = 96;
+            let left = offsetLeft;
+            for (let i = 0; i < numberOfElements; i++) {
+                addGroundPlatform(left);
+                left += platformWidth;
+            }
+        }
+
+        function addGroundPlatform(left) {
+            const bottom = 0;
+            const className = "gd-ground-platform";
+            addBottomDiv(className, left, bottom);
+        }
+
+        // ##### DOM Helper Functions #####
+
+        function addBottomDiv(className, left, bottom) {
+            const div = addDiv(className);
+            div.style.left = left + "px";
+            div.style.bottom = bottom + "px";
+            return div;
+        }
+
+        function addDiv(className) {
+            const div = document.createElement("div");
+            div.className = className;
+            document.body.appendChild(div);
+            return div;
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+    </script>
+</body>
+</html>

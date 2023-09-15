@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Direction Key Input</title>
+    <link rel="stylesheet" type="text/css" href="styles/events.css">
+    <script type="text/javascript">
+
+        // ##### Initialization #####
+
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            document.addEventListener("keydown", onKeyDown);
+        }
+
+        // ##### Event Handlers #####
+
+        function onKeyDown(event) {
+            switch(event.keyCode) {
+                case 37:
+                    alert("Left arrow pressed.");
+                    break;
+                case 38:
+                    alert("Up arrow pressed.");
+                    break;
+                case 39:
+                    alert("Right arrow pressed.");
+                    break;
+                case 40:
+                    alert("Down arrow pressed.");
+                    break;
+                case 32:
+                    alert("Space pressed.");
+                    break;
+            }
+        }
+
+</script>
+</head>
+<body>
+</body>
+</html>

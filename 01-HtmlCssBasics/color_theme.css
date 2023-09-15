@@ -1,0 +1,38 @@
+/*############ COLORS ############*/
+.gd-bgcolor-1 {
+    background-color: #4e67c8;
+}
+.gd-bgcolor-1 .gd-color-light {
+    background-color: #dbe0f4;
+}
+.gd-bgcolor-2 {
+    background-color: #5eccf3;
+}
+.gd-bgcolor-2.gd-color-light {
+    background-color: #ddf5fd;
+}
+.gd-bgcolor-3 {
+    background-color: #a7ea52;
+}
+.gd-bgcolor-3.gd-color-light {
+    background-color: #edfbdb;
+}
+.gd-bgcolor-4 {
+    background-color: #5dceaf;
+}
+.gd-bgcolor-4.gd-color-light {
+    background-color: #def5ef;
+}
+.gd-bgcolor-5 {
+    background-color: #ff8021;
+}
+.gd-bgcolor-5.gd-color-light {
+    background-color: #ffe6d2;
+}
+.gd-bgcolor-6 {
+    background-color: #f14124;
+}
+.gd-bgcolor-6.gd-color-light {
+    background-color: #fcdad3;
+}
+

@@ -1,0 +1,89 @@
+body {
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    background-image: url(images/game_background_1.png);
+}
+
+/* #### Platform Elements #### */
+
+div.gd-base-platform {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 96px;
+    height: 80px;
+    background-image: url(images/platform_tileset.png);
+    background-position: -288px -152px;
+}
+
+div.gd-base-platform.gd-hp-2 {
+    left: calc(1*96px);
+}
+div.gd-base-platform.gd-hp-3 {
+    left: calc(2*96px);
+}
+div.gd-base-platform.gd-hp-4 {
+    left: calc(3*96px);
+}
+div.gd-base-platform.gd-hp-5 {
+    left: calc(4*96px);
+}
+div.gd-base-platform.gd-hp-6 {
+    left: calc(5*96px);
+}
+
+
+/* #### Hero #### */
+
+div.gd-hero {
+    position: absolute;
+    bottom: 72px;
+    left: 360px;
+    width: 48px;
+    height: 58px;
+    background-image: url(images/pixel_mage_walk1.png);
+    background-position: -20px 74px;
+}
+
+@keyframes gd-keyframe-hero-run {
+    0% {background-image: url(images/pixel_mage_walk1.png);}
+    16.7% {background-image: url(images/pixel_mage_walk2.png);}
+    33.3% {background-image: url(images/pixel_mage_walk3.png);}
+    50% {background-image: url(images/pixel_mage_walk4.png);}
+    66.7% {background-image: url(images/pixel_mage_walk5.png);}
+    83.3% {background-image: url(images/pixel_mage_walk6.png);}
+    100% {background-image: url(images/pixel_mage_walk1.png);}
+}
+
+.gd-ani-hero-run {
+    animation-timing-function: steps(1);
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-name: gd-keyframe-hero-run
+}
+
+/* #### Explosion #### */
+
+div.gd-explosion {
+    position: absolute;
+    bottom: 90px;
+    left: 800px;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2.5rem;
+    background-image: url(images/firework.jpg);
+    background-position: -0.5rem 6.4rem;
+    background-size: 480%;
+}
+
+@keyframes gd-keyframe-explosion-flight {
+    0% {left: 800px;}
+    100% {left: -100px;}
+}
+
+.gd-ani-explosion-flight {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-name: gd-keyframe-explosion-flight
+}
+

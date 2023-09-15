@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Running Hero</title>
+    <link rel="stylesheet" type="text/css" href="styles/platform.css">
+    <link rel="stylesheet" type="text/css" href="heroes/ninja_girl/hero.css">
+    <script type="text/javascript">
+        // ##### Global Data #####
+
+        var gd = gd || {};
+
+        // ##### Initialization #####
+
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            addGroundPlatformGroup(0, 20);
+            addHero();
+            wireUpInputEvents();
+        }
+
+        // ##### Input Controls #####
+
+        function wireUpInputEvents() {
+            document.addEventListener("keydown", onKeyDown);
+            document.addEventListener("keyup", onKeyUp);
+        }
+
+        function onKeyDown(event) {
+            switch (event.keyCode) {
+                case 37:
+                    startMoveLeft();
+                    break;
+                case 39:
+                    startMoveRight();
+                    break;
+            }
+        }
+
+        function onKeyUp(event) {
+            if (event.keyCode === 37) {
+                stopMoveLeft();
+            } else if (event.keyCode === 39) {
+                stopMoveRight();
+            }
+        }
+
+        // ##### Character Functions #####
+
+        function addHero() {
+            gd.hero = addDiv("gd-hero gd-ani-hero-idle gd-ani-right");
+        }
+
+        function startMoveRight() {
+            if (gd.hero.movesRight) {
+                return;
+            }
+            gd.hero.movesLeft = false;
+            gd.hero.movesRight = true;
+            gd.hero.className = "gd-hero gd-ani-hero-run gd-ani-right";
+            moveRight();
+        }
+
+        function moveRight() {
+            if (gd.hero.movesRight) {
+                gd.hero.style.left = (gd.hero.offsetLeft + 2) + "px";
+                setTimeout(moveRight, 10);
+            }
+        }
+
+        function stopMoveRight() {
+            gd.hero.movesRight = false;
+                if (!gd.hero.movesLeft) {
+                    gd.hero.className = "gd-hero gd-ani-hero-idle gd-ani-right";
+                }
+        }
+
+        function startMoveLeft() {
+            if (gd.hero.movesLeft) {
+                return;
+            }
+            gd.hero.movesLeft = true;
+            gd.hero.movesRight = false;
+            gd.hero.className = "gd-hero gd-ani-hero-run gd-ani-left";
+            moveLeft();
+        }
+
+        function moveLeft() {
+            if (gd.hero.movesLeft) {
+                gd.hero.style.left = (gd.hero.offsetLeft - 2) + "px";
+                setTimeout(moveLeft, 10);
+            }
+        }
+
+        function stopMoveLeft() {
+            gd.hero.movesLeft = false;
+                if (!gd.hero.movesRight) {
+                    gd.hero.className = "gd-hero gd-ani-hero-idle gd-ani-left";
+                }
+        }
+
+        // ##### Platform Placement #####
+
+        function addGroundPlatformGroup(offsetLeft, numberOfElements) {
+            const platformWidth = 96;
+            let left = offsetLeft;
+            for (let i = 0; i < numberOfElements; i++) {
+                addGroundPlatform(left);
+                left += platformWidth;
+            }
+        }
+
+        function addGroundPlatform(left) {
+            const bottom = 0;
+            const className = "gd-ground-platform";
+            addBottomDiv(className, left, bottom);
+        }
+
+        // ##### DOM Helper Functions #####
+
+        function addBottomDiv(className, left, bottom) {
+            const div = addDiv(className);
+            div.style.left = left + "px";
+            div.style.bottom = bottom + "px";
+            return div;
+        }
+
+        function addDiv(className) {
+            const div = document.createElement("div");
+            div.className = className;
+            document.body.appendChild(div);
+            return div;
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

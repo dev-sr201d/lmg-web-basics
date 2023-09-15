@@ -1,0 +1,15 @@
+body {
+    background-color: #d0e4fe;
+    color: #00008b;
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+p {
+    width: 600px;
+    margin: auto;
+}

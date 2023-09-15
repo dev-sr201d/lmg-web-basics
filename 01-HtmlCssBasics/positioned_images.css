@@ -1,0 +1,75 @@
+body {
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    background-image: url(images/game_background_1.png);
+}
+
+div.gd-explosion {
+    position: absolute;
+    top: 400px;
+    left: 400px;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-image: url(images/firework.jpg);
+    background-position: -8px 102px;
+    background-size: 480%;
+}
+
+div.gd-fox {
+    position: absolute;
+    bottom: 72px;
+    left: 200px;
+    width: 128px;
+    height: 96px;
+    background-image: url(images/fox_run_90.png);
+    background-position: -64px 184px;
+}
+
+div.gd-cat {
+    position: absolute;
+    bottom: 80px;
+    left: 460px;
+    width: 48px;
+    height: 48px;
+    background-image: url(images/catcharfull.png);
+    background-position: -96px 96px;
+}
+
+div.gd-mage {
+    position: absolute;
+    bottom: 76px;
+    left: 360px;
+    width: 48px;
+    height: 48px;
+    background-image: url(images/pixel_mage_walk1.png);
+    background-position: -20px 64px;
+}
+
+div.gd-base-platform {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 96px;
+    height: 80px;
+    background-image: url(images/platform_tileset.png);
+    background-position: -288px -152px;
+}
+
+/*#### Platform Elements ####*/
+div.gd-base-platform.gd-hp-2 {
+    left: calc(1*96px);
+}
+div.gd-base-platform.gd-hp-3 {
+    left: calc(2*96px);
+}
+div.gd-base-platform.gd-hp-4 {
+    left: calc(3*96px);
+}
+div.gd-base-platform.gd-hp-5 {
+    left: calc(4*96px);
+}
+div.gd-base-platform.gd-hp-6 {
+    left: calc(5*96px);
+}
+
+

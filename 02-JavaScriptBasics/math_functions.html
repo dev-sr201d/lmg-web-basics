@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript</title>
+    <script type="text/javascript">
+        // ##### Initialization #####
+
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            let a = 2;
+            let b = 5;
+            let c = sum(a, b);
+            alert("Die Summe von " + a + " und " + b + " ist " + c + ".");
+        }
+
+        // ##### Functions #####
+
+        function sum(x1, x2) {
+            let y = x1 + x2;
+            return y;
+        }
+
+        function faculty(x) {
+            let y = 1;
+
+            if (x == 0) {
+                return y;
+            }
+            
+            for (let i = 1; i <= x; i = i + 1) {
+                y = y * i;
+            }
+
+            return y;
+        }
+
+    </script>
+</head>
+<body>
+</body>
+</html>

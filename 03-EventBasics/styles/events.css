@@ -1,0 +1,7 @@
+body {
+    background-color: #ffddee;
+    background-image: linear-gradient(to bottom right, #ffffcc, #ffccff);
+    background-repeat: no-repeat;
+    min-height: 1080px;
+    overflow: clip;
+}

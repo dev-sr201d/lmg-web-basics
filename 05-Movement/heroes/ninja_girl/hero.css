@@ -1,0 +1,84 @@
+div.gd-hero {
+    position: absolute;
+    bottom: 72px;
+    left: 360px;
+}
+
+/* ##### Idle Animation ##### */
+
+@keyframes gd-keyframe-hero-idle {
+    0% { background-position: 0px 0px; }
+    11.11% { background-position: -72.4px 0px; }
+    22.22% { background-position: -144.8px 0px; }
+    33.33% { background-position: -217.2px 0px; }
+    44.44% { background-position: -289.6px 0px; }
+    55.55% { background-position: 0px -125px; }
+    66.66% { background-position: -72.4px -125px; }
+    77.77% { background-position: -144.8px -125px; }
+    88.88% { background-position: -217.2px -125px; }
+    100% { background-position: -289.6px -125px; }
+}
+
+.gd-ani-hero-idle  {
+    width: 72.4px;
+    height: 125px;
+    animation-timing-function: steps(1);
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-name: gd-keyframe-hero-idle;
+}
+
+.gd-ani-hero-idle.gd-ani-right {
+    background-image: url(spritesheet_idle_right.png);
+}
+
+.gd-ani-hero-idle.gd-ani-left {
+    background-image: url(spritesheet_idle_left.png);
+}
+
+/* ##### Run & Jump Animation ##### */
+
+@keyframes gd-keyframe-hero-run {
+    0% { background-position: 0px 0px; }
+    11.11% { background-position: -376px 0px; }
+    22.22% { background-position: -752px 0px; }
+    33.33% { background-position: -1128px 0px; }
+    44.44% { background-position: -1504px 0px; }
+    55.55% { background-position: -0px -130px; }
+    66.66% { background-position: -94px -130px; }
+    77.77% { background-position: -188px -130px; }
+    88.88% { background-position: -282px -130px; }
+    100% { background-position: -376px -130px; }
+}
+
+.gd-ani-hero-run {
+    width: 94px;
+    height: 130px;
+    animation-timing-function: steps(1);
+    animation-iteration-count: infinite;
+    animation-duration: .5s;
+    animation-name: gd-keyframe-hero-run;
+}
+
+.gd-ani-hero-run.gd-ani-right {
+    background-image: url(spritesheet_run_right.png);
+}
+
+.gd-ani-hero-run.gd-ani-left {
+    background-image: url(spritesheet_run_left.png);
+}
+
+.gd-ani-hero-jump {
+    width: 94px;
+    height: 130px;
+    background-position: 0px 0px;
+}
+
+.gd-ani-hero-jump.gd-ani-right {
+    background-image: url(spritesheet_run_right.png);
+}
+
+.gd-ani-hero-jump.gd-ani-left {
+    background-image: url(spritesheet_run_left.png);
+}
+
