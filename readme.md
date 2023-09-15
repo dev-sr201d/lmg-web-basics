@@ -15,34 +15,34 @@ Recommended Resources
 
 Credits
 -------
-Images in this repo have been obtained from itch.io and craftpix.net.
-All images are free to use in non-commercial projects.
+Images in this repo have been obtained from itch.io and craftpix.net.  
+All images are free to use in non-commercial projects.  
 Please refer to the original sources for use in other projects than this.
 
 ### Fox Character
-Created by enGVee.
+Created by enGVee.  
 Source: https://engvee.itch.io/isometric-animated-fox
 
 ### Ninja Girl Character
-Created by pzUH.
+Created by pzUH.  
 Source: https://pzuh.itch.io/ninja-girl-free-sprites
 
 ### Dinosaur Character
-Created by pzUH.
+Created by pzUH.  
 Source: https://pzuh.itch.io/free-dino-sprites
 
 ### Mage Character
-Created by craftpix.net
+Created by craftpix.net.  
 Source: https://craftpix.net/freebies/assassin-mage-viking-free-pixel-art-game-heroes
 
 ### Platform Elements
-Created by edermunizz.
+Created by edermunizz.  
 Source: https://edermunizz.itch.io/free-pixel-art-plataformer-painted-style
 
 ### Mountain Background Pictures
-Created by craftpix.net.
+Created by craftpix.net.  
 Source: https://craftpix.net/freebies/free-horizontal-2d-game-backgrounds
 
 ### Desert Background Pictures
-Created by styloo.
+Created by styloo.  
 Source: https://styloo.itch.io/desert-parallax-background
