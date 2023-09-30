@@ -13,23 +13,27 @@ Recommended Resources
 
 - [SelfHTML](https://wiki.selfhtml.org/wiki/SELFHTML)
 
-Credits
--------
-Images in this repo have been obtained from itch.io and craftpix.net.  
-All images are free to use in non-commercial projects.  
-Please refer to the original sources for use in other projects than this.
+
+Credits & Licensing
+-------------------
+HTML and CSS files are free to use in any way you like.
+
+Images in this project have been obtained from itch.io and craftpix.net.  
+While the original artwork is free to use in non-commercial projects, you may not extract images from this project for use in other projects!  
+Please refer to the original sources listed below for inclusion in other projects.
 
 ### Fox Character
 Created by enGVee.  
-Source: https://engvee.itch.io/isometric-animated-fox
+Source: https://engvee.itch.io/free-sideview-sprites-collection
 
-### Ninja Girl Character
-Created by pzUH.  
-Source: https://pzuh.itch.io/ninja-girl-free-sprites
+### Cat Hero Character
+Created by kumadapanda.  
+Source: https://kumadapanda.itch.io/cat-hero
 
-### Dinosaur Character
+### Ninja Girl and Dinosaur Characters
 Created by pzUH.  
-Source: https://pzuh.itch.io/free-dino-sprites
+Source: https://pzuh.itch.io/ninja-girl-free-sprites  
+Source: https://pzuh.itch.io/free-dino-sprites  
 
 ### Mage Character
 Created by craftpix.net.  
@@ -39,7 +43,7 @@ Source: https://craftpix.net/freebies/assassin-mage-viking-free-pixel-art-game-h
 Created by edermunizz.  
 Source: https://edermunizz.itch.io/free-pixel-art-plataformer-painted-style
 
-### Mountain Background Pictures
+### Mountain Background Picture
 Created by craftpix.net.  
 Source: https://craftpix.net/freebies/free-horizontal-2d-game-backgrounds
 
