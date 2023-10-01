@@ -3,16 +3,14 @@ body {
     background-image: url(images/game_background_1.png);
 }
 
-div.gd-explosion {
+div.gd-ball {
     position: absolute;
     top: 400px;
     left: 400px;
-    width: 80px;
-    height: 80px;
-    border-radius: 40px;
-    background-image: url(images/firework.jpg);
-    background-position: -8px 102px;
-    background-size: 480%;
+    width: 64px;
+    height: 64px;
+    background-image: url(images/wenrexa_balls.png);
+    background-position: 256px -64px;
 }
 
 div.gd-fox {
@@ -23,16 +21,6 @@ div.gd-fox {
     height: 96px;
     background-image: url(images/fox_run_90.png);
     background-position: -64px 184px;
-}
-
-div.gd-cat {
-    position: absolute;
-    bottom: 80px;
-    left: 460px;
-    width: 48px;
-    height: 48px;
-    background-image: url(images/catcharfull.png);
-    background-position: -96px 96px;
 }
 
 div.gd-mage {

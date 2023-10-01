@@ -63,27 +63,25 @@ div.gd-hero {
 
 /* #### Explosion #### */
 
-div.gd-explosion {
+div.gd-ball {
     position: absolute;
     bottom: 90px;
     left: 800px;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 2.5rem;
-    background-image: url(images/firework.jpg);
-    background-position: -0.5rem 6.4rem;
-    background-size: 480%;
+    width: 64px;
+    height: 64px;
+    background-image: url(images/wenrexa_balls.png);
+    background-position: 256px -64px;
 }
 
-@keyframes gd-keyframe-explosion-flight {
+@keyframes gd-keyframe-ball-flight {
     0% {left: 800px;}
     100% {left: -100px;}
 }
 
-.gd-ani-explosion-flight {
+.gd-ani-ball-flight {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-duration: 3s;
-    animation-name: gd-keyframe-explosion-flight
+    animation-name: gd-keyframe-ball-flight
 }
 

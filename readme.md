@@ -26,10 +26,6 @@ Please refer to the original sources listed below for inclusion in other project
 Created by enGVee.  
 Source: https://engvee.itch.io/free-sideview-sprites-collection
 
-### Cat Hero Character
-Created by kumadapanda.  
-Source: https://kumadapanda.itch.io/cat-hero
-
 ### Ninja Girl and Dinosaur Characters
 Created by pzUH.  
 Source: https://pzuh.itch.io/ninja-girl-free-sprites  
@@ -38,6 +34,10 @@ Source: https://pzuh.itch.io/free-dino-sprites
 ### Mage Character
 Created by craftpix.net.  
 Source: https://craftpix.net/freebies/assassin-mage-viking-free-pixel-art-game-heroes
+
+### Colored Balls
+Created by wenrexa.  
+Source: https://wenrexa.itch.io/christmas-balls
 
 ### Platform Elements
 Created by edermunizz.  
