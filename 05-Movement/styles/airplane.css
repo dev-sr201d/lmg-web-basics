@@ -1,0 +1,20 @@
+body {
+    background-image: url(../images/desert.png);
+    overflow: hidden;
+}
+
+.gd-airplane {
+    position: absolute;
+    bottom: 500px;
+    left: 0px;
+    width: 149px;
+    height: 71px;
+}
+
+.gd-airplane.gd-right {
+    background-image: url(../images/airplane_right.png);
+}
+
+.gd-airplane.gd-left {
+    background-image: url(../images/airplane_left.png);
+}

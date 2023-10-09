@@ -50,3 +50,6 @@ Source: https://craftpix.net/freebies/free-horizontal-2d-game-backgrounds
 ### Desert Background Pictures
 Created by styloo.  
 Source: https://styloo.itch.io/desert-parallax-background
+
+### Airplane Character
+Created by bing Image Creator.
