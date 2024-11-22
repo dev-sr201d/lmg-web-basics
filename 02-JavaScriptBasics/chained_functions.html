@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript</title>
+    <script type="text/javascript">
+        // Live Replay Idea
+        // ================
+        // Hand out one sheet of paper per function.
+        // Title the sheets with the function name.
+        // Draw a box grid on each sheet so that
+        // there is a box for each argument and local
+        // variable.
+        //
+        // Hand out small pieces of paper to write
+        // numbers on.
+        // 
+        // Start the function chain with the person
+        // having the "main" function.
+        // Let that person fill their boxes with
+        // paper pieces with the right numbers on.
+        // Let the person hand over copies of 
+        // the pieces to the appropriate owners
+        // of the called functions.
+        // The called persons put the pieces
+        // into the right boxes on their sheet
+        // and continue...
+
+        // ##### Initialization #####
+
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            main();
+        }
+
+        // ##### Core Functions #####
+
+        function main() {
+            let a = 2;
+            let b = 6;
+            let c = 3;
+
+            let d = sum(a, a);
+            let e = divide(b, c);
+
+            let f = increment(e);
+
+            sub(d, f);
+        }
+
+        function sub(n1, n2) {
+            let a = multiply(n1, n1);
+            let b = multiply(n2, n2);
+
+            let c = sum(a, b);
+            let d = squareRoot(c);
+
+            alert(`Das Ergebnis ist ${d}.`);
+        }
+
+        // ##### Math Functions #####
+
+        function divide(x1, x2) {
+            let y = x1 / x2;
+            return y;
+        }
+
+        function increment(x1) {
+            let y = x1 + 1;
+            return y;
+        }
+
+        function multiply(x1, x2) {
+            let y = x1 * x2;
+            return y;
+        }
+
+        function sum(x1, x2) {
+            let y = x1 + x2;
+            return y;
+        }
+
+        function squareRoot(x1) {
+            return Math.sqrt(x1);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
