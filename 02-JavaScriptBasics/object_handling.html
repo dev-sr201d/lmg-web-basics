@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript</title>
+    <script type="text/javascript">
+        // ##### Initialization #####
+
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            main();
+        }
+
+        // ##### Core Functions #####
+
+        function main() {
+            let houseA = { color: "rot", roofColor: "schwarz", heatingType: "Öl" };
+
+            thatcher(houseA);
+
+            alert(`Das Haus ist ${houseA.color}, das Dach ist ${houseA.roofColor}, die Heizungsart ist ${houseA.heatingType}.`);
+
+            let newColor = "beige";
+            painter(houseA, newColor);
+
+            alert(`Das Haus ist ${houseA.color}, das Dach ist ${houseA.roofColor}, die Heizungsart ist ${houseA.heatingType}.`);
+
+            let newHeatingType = "Wärmepumpe";
+            plumber(houseA, newHeatingType);
+
+            alert(`Das Haus ist ${houseA.color}, das Dach ist ${houseA.roofColor}, die Heizungsart ist ${houseA.heatingType}.`);
+        }
+
+        // ##### Crafter Functions #####
+
+        function thatcher(house) {
+            house.roofColor = "dunkelblau";
+        }
+
+        function painter(house, color) {
+            house.color = color;
+        }
+
+        function plumber(house, heatingType) {
+            house.heatingType = heatingType;
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
