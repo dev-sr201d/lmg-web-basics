@@ -1,0 +1,204 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    padding: 1em;
+    margin: 0em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main {
+    height: 90%;
+    max-width: 40em;
+    margin-bottom: 8em;
+}
+
+article {
+    height: 90%;
+    padding: 1em;
+    margin-bottom: 8em;
+}
+
+section {
+    display: flex;
+}
+
+section > div {
+    max-width: 40em;
+}
+
+stage {
+    display: block;
+    margin: 1em;
+}
+
+pre {
+    border: 1px solid #000;
+    padding: 1em;
+    margin: 1em;
+    background-color: #eee;
+}
+
+key-frame {
+    color: #939;
+}
+
+.gd-btn {
+    background-color: #69d;
+    color: #fff;
+    border-radius: .5em;
+    font-size: 1.5em;
+    padding: .3em .4em;
+}
+
+.gd-btn-next {
+    display: block;
+    position: relative;
+    top: 3em;
+}
+
+.gd-btn-next::after {
+    content: "weiter";
+}
+
+.gd-btn-run {
+    margin-top: 1em;
+}
+
+.gd-btn-run::after {
+    content: "Start";
+}
+
+.gd-btn-run.gd-active::after {
+    content: "Reset";
+}
+
+/* #### Demo Animations #### */
+
+.gd-demo {
+    display: block;
+    width: 4em;
+    height: 4em;
+    background-color: #6d9;
+    border-radius: 50%;
+}
+
+@keyframes gd-keyframe-demo-1 {
+    0% {background-color: #6d9;}
+    25% {background-color: #d96;}
+    50% {background-color: #96d;}
+    75% {background-color: #9d6;}
+    100% {background-color: #6d9;}
+}
+
+.gd-demo-1.gd-active {
+    animation-duration: 3s;
+    animation-name: gd-keyframe-demo-1;
+}
+
+.gd-demo-2.gd-active {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: gd-keyframe-demo-1;
+}
+
+.gd-demo-3, .gd-demo-4 {
+    position: relative;
+}
+
+@keyframes gd-keyframe-demo-3 {
+    0% {left: 0em;}
+    25% {left: 2em;}
+    50% {left: 4em;}
+    75% {left: 6em;}
+    100% {left: 8em;}
+}
+
+.gd-demo-3.gd-active {
+    animation-duration: 3s;
+    animation-name: gd-keyframe-demo-3;
+}
+
+.gd-demo-4.gd-active {
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-name: gd-keyframe-demo-3;
+}
+
+.gd-demo-5 {
+    width: 256px;
+    height: 256px;
+    background-image: url(./images/fox_run_90.png);
+}
+
+@keyframes gd-keyframe-demo-5 {
+    0% { background-position: 0px 0px; }
+    6.25% { background-position: -256px 0px; }
+    12.5% { background-position: -512px 0px; }
+    18.75% { background-position: -768px 0px; }
+    25% { background-position: 0px -256px; }
+    31.25% { background-position: -256px -256px; }
+    37.5% { background-position: -512px -256px; }
+    43.75% { background-position: -768px -256px; }
+    50% { background-position: 0px -512px; }
+    56.25% { background-position: -256px -512px; }
+    62.5% { background-position: -512px -512px; }
+    68.75% { background-position: -768px -512px; }
+    75% { background-position: 0px -768px; }
+    81.25% { background-position: -256px -768px; }
+    87.5% { background-position: -512px -768px; }
+    93.75% { background-position: -768px -768px; }
+    100% { background-position: 0px 0px; }
+}
+
+.gd-demo-5.gd-active {
+    animation-duration: 8s;
+    animation-timing-function: steps(1, jump-start);
+    animation-iteration-count: infinite;
+    animation-name: gd-keyframe-demo-5;
+}
+
+.gd-sprite-sheet {
+    margin-top: 1em;
+    width: 512px;
+    height: 512px;
+    background-image: url(./images/fox_run_90.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.gd-sprite-frame {
+    width: 128px;
+    height: 128px;
+    border: 2px solid #000;
+}
+
+.gd-sprite-sheet.gd-active {
+    animation-duration: 8s;
+    animation-timing-function: steps(1, jump-start);
+    animation-iteration-count: infinite;
+    animation-name: gd-sprite-sheet;
+}
+
+@keyframes gd-sprite-sheet {
+    0% { background-position: 0px 0px; }
+    6.25% { background-position: -128px 0px; }
+    12.5% { background-position: -256px 0px; }
+    18.75% { background-position: -384px 0px; }
+    25% { background-position: 0px -128px; }
+    31.25% { background-position: -128px -128px; }
+    37.5% { background-position: -256px -128px; }
+    43.75% { background-position: -384px -128px; }
+    50% { background-position: 0px -256px; }
+    56.25% { background-position: -128px -256px; }
+    62.5% { background-position: -256px -256px; }
+    68.75% { background-position: -384px -256px; }
+    75% { background-position: 0px -384px; }
+    81.25% { background-position: -128px -384px; }
+    87.5% { background-position: -256px -384px; }
+    93.75% { background-position: -384px -384px; }
+    100% { background-position: 0px 0px; }
+}
+

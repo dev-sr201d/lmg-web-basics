@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation Notebook</title>
+    <link rel="stylesheet" type="text/css" href="./animation_introduction.css">
+</head>
+<body>
+
+    <main>
+        <h1>CSS-Animationen</h1>
+        <p>Hier ein paar Beispiele für Animationen mit CSS.</p>
+        <p>Jedes Beispiel zeigt links die CSS-Formatierung und rechts die Animation, die per Button gestartet werden kann.</p>
+        <p>Das Demonstrationsobjekt in den folgenden Beispielen ist immer ein &lt;div&gt;-Tag, aber es kann grundsätzlich auch jeder andere Tag animiert werden.</p>
+        <p>Die Objekte haben eine CSS-Klasse mit einem Basis-Styling zugewiesen bekommen (ergibt einen grünen Kreis).</p>
+        <code>
+            <pre>
+.gd-demo {
+    display: block;
+    width: 4em;
+    height: 4em;
+    background-color: #6d9;
+    border-radius: 50%;
+}
+            </pre>
+        </code>
+        <p>Jedes Objekt hat eine eigene CSS-Kasse, z.B. "gd-demo-1", erhalten.</p>
+        <p>Durch Betätigung des "Start"-Buttons im jeweiligen Beispiel wird dem Objekt vorübergehend die CSS-Klasse "gd-active" hinzugefügt.</p>
+        <p>Die jeweilige Animation ist für die Kombination der objekteigenen CSS-Klasse und "gd-active" hinterlegt, z.B. "gd-demo-1 gd-active".</p>
+        <button class="gd-btn gd-btn-next" id="btnNext0"></button>
+    </main>
+
+    <article id="article1">
+        <h2>Einfacher Farbwechsel</h2>
+        <section>
+            <div>
+                <h3>Animationskonfiguration</h3>
+                <p>Die CSS-Konfiguration für eine Animation steuert die Dauer und das Timing der Übergänge zwischen einzelnen "Schlüsselszenen" (<code>@keyframes</code>).</p>
+                <p>Wenn nicht anders angegeben, ist <code>ease</code> das Standard-Timing (beschleunigen zur Mitte und wieder verlangsamen).</p>
+                <p>Für eine Animation müssen mindestens die Dauer (<code>animation-duration</code>) und der Name der Schlüsselszenendefinition (<code>animation-name</code>) angegeben sein.</p>
+                <code>
+                    <pre>
+.gd-demo-1.gd-active {
+    <strong>animation-duration: 3s;
+    animation-name: <key-frame>gd-keyframe-demo-1</key-frame>;</strong>
+}
+                    </pre>
+                </code>
+                <h3>Key Frames</h3>
+                <p>"Schlüsselszenen" definieren die wesentlichen Zustände, die eine Animation durchlaufen soll.</p>
+                <p>Es muss mindestens zwei Schlüsselszenen geben: 0% und 100%, also Anfangs- und Endzustand.<br>
+                    0% entspricht dem Zustand bei 0s, 100% in diesem Fall dem Stand nach 3s.</p>
+                <p>Weitere Zustände und wann diese erreicht sein sollen, werden mit %-Angaben zwischen 0 und 100 definiert.<br>
+                    Der Zustand bei 50% wäre bei dieser Animation nach 1,5s erreicht.</p>
+                <code>
+                    <pre>
+@keyframes <key-frame>gd-keyframe-demo-1</key-frame> {
+    0% {background-color: #6d9;}
+    25% {background-color: #d96;}
+    50% {background-color: #96d;}
+    75% {background-color: #9d6;}
+    100% {background-color: #6d9;}
+}
+                    </pre>
+                </code>
+            </div>
+            <stage>
+                <div class="gd-demo gd-demo-1" id="demo1"></div>
+                <button class="gd-btn gd-btn-run" id="btnRun1"></button>
+            </stage>
+        </section>
+        <button class="gd-btn gd-btn-next" id="btnNext1"></button>
+    </article>
+
+    <article id="article2">
+        <h2>Einfacher Farbwechsel - unendlich wiederholt</h2>
+        <section>
+            <div>
+                <h3>Animationskonfiguration</h3>
+                <p>Man kann definieren, wie oft sich eine Animation wiederholen soll (<code>animation-iteration-count</code>).<br>
+                    standardmäßig wird eine Animation nur einmal abgespielt.<br>
+                    Das Objekt kehrt nach der Animation in den Anfangszustand zurück (0% key frame).</p>
+                <code>
+                    <pre>
+.gd-demo-2.gd-active {
+    animation-duration: 3s;
+    <strong>animation-iteration-count: infinite;</strong>
+    animation-name: <key-frame>gd-keyframe-demo-2</key-frame>;
+}
+                    </pre>
+                </code>
+                <h3>Key Frames</h3>
+                <code>
+                    <pre>
+@keyframes <key-frame>gd-keyframe-demo-2</key-frame> {
+    0% {background-color: #6d9;}
+    25% {background-color: #d96;}
+    50% {background-color: #96d;}
+    75% {background-color: #9d6;}
+    100% {background-color: #6d9;}
+}
+                    </pre>
+                </code>
+            </div>
+            <stage>
+                <div class="gd-demo gd-demo-2" id="demo2"></div>
+                <button class="gd-btn gd-btn-run" id="btnRun2"></button>
+            </stage>
+        </section>
+        <button class="gd-btn gd-btn-next" id="btnNext2"></button>
+    </article>
+
+    <article id="article3">
+        <h2>Einfache Bewegung</h2>
+        <section>
+            <div>
+                <h3>Objektkonfiguration</h3>
+                <p>Um die Position verändern zu können, ist die Eigenschaft <code>position</code> notwendig.</p>
+                <code>
+                    <pre>
+.gd-demo-3 {
+    position: relative;
+}
+                    </pre>
+                </code>
+                <h3>Animationskonfiguration</h3>
+                <p>Wie beim Farbwechsel ist hier keine bestimmte Timing-Funktion angegeben.<br>
+                    Deshalb wird auch hier <code>ease</code> verwendet.</p>
+                <p><code>ease</code> führt zu Positionswechseln in "weichen" Schritten mit Übergängen.</p>
+                <code>
+                    <pre>
+.gd-demo-3.gd-active {
+    animation-duration: 3s;
+    animation-name: <key-frame>gd-keyframe-demo-3</key-frame>;
+}
+                    </pre>
+                </code>
+                <h3>Key Frames</h3>
+                <code>
+                    <pre>
+@keyframes <key-frame>gd-keyframe-demo-3</key-frame> {
+    0% {left: 0em;}
+    25% {left: 2em;}
+    50% {left: 4em;}
+    75% {left: 6em;}
+    100% {left: 8em;}
+}
+                    </pre>
+                </code>
+            </div>
+            <stage>
+                <div class="gd-demo gd-demo-3" id="demo3"></div>
+                <button class="gd-btn gd-btn-run" id="btnRun3"></button>
+            </stage>
+        </section>
+        <button class="gd-btn gd-btn-next" id="btnNext3"></button>
+    </article>
+
+    <article id="article4">
+        <h2>Einfache Bewegung - linear</h2>
+        <section>
+            <div>
+                <h3>Objektkonfiguration</h3>
+                <code>
+                    <pre>
+.gd-demo-4 {
+    position: relative;
+}
+                    </pre>
+                </code>
+                <h3>Animationskonfiguration</h3>
+                <p>Um die Bewegung flüssig erscheinen zu lassen, wird die Timing-Funktion <code>linear</code> benötigt.</p>
+                <code>
+                    <pre>
+.gd-demo-4.gd-active {
+    animation-duration: 3s;
+    <strong>animation-timing-function: linear;</strong>
+    animation-name: <key-frame>gd-keyframe-demo-4</key-frame>;
+}
+                    </pre>
+                </code>
+                <h3>Key Frames</h3>
+                <code>
+                    <pre>
+@keyframes <key-frame>gd-keyframe-demo-4</key-frame> {
+    0% {left: 0em;}
+    25% {left: 2em;}
+    50% {left: 4em;}
+    75% {left: 6em;}
+    100% {left: 8em;}
+}
+                    </pre>
+                </code>
+            </div>
+            <stage>
+                <div class="gd-demo gd-demo-4" id="demo4"></div>
+                <button class="gd-btn gd-btn-run" id="btnRun4"></button>
+            </stage>
+        </section>
+        <button class="gd-btn gd-btn-next" id="btnNext4"></button>
+    </article>
+
+    <article id="article5">
+        <h2>Sprite Sheet Transitioning</h2>
+        <section>
+            <div>
+                <h3>Objektkonfiguration</h3>
+                <p>Für Übergangsanimationen bei Sprite Sheets benötigt das Objekt ein Hintergrundbild.</p>
+                <p>Die Größe des Objekts muss genau ein Teilbild abdecken.<br>
+                    Die Animation schiebt dann das Hintergrundbild schrittweise so, dass immer ein anderes Teilbild zu sehen ist.</p>
+                <code>
+                    <pre>
+.gd-demo-5 {
+    width: 256px;
+    height: 256px;
+    background-image: url(./images/fox_run_90.png);
+}
+                    </pre>
+                </code>
+                <h3>Animationskonfiguration</h3>
+                <p>Um echte Bewegung mit Teilbildern zu simulieren, müssen die Teilbilder in Schritten ausgetauscht werden.</p>
+                <p><code>ease</code> und <code>linear</code> würden den Schiebevorgang des Hintergrundbilds mit animieren. Das ist hier nicht hilfreich.</p>
+                <p>Deshalb verwendet diese Animation die <code>steps</code>-Funktion, um wie bei einem Spielfilm die Einzelbilder auszutauschen.</p>
+                <code>
+                    <pre>
+.gd-demo-5.gd-active {
+    animation-duration: 4s;
+    <strong>animation-timing-function: steps(1, jump-start);</strong>
+    <strong>animation-iteration-count: infinite;</strong>
+    animation-name: <key-frame>gd-keyframe-demo-5</key-frame>;
+}
+                    </pre>
+                </code>
+                <h3>Key Frames</h3>
+                <p>Hier werden die Teilbilder im Hintergrund des Objekts verschoben, indem die Position des Hintergrundbildes im Anzeigeobjekt geändert wird (<code>background-position: x y</code>).</p>
+                <p>Wir haben hier 16 Teilbilder (Frames), die in 4s gewechselt werden<br>
+                    => 4 Frames per Second (FPS).</p>
+                <code>
+                    <pre>
+@keyframes <key-frame>gd-keyframe-demo-5</key-frame> {
+    0% { background-position: 0px 0px; }
+    6.25% { background-position: -256px 0px; }
+    12.5% { background-position: -512px 0px; }
+    18.75% { background-position: -768px 0px; }
+    25% { background-position: 0px -256px; }
+    31.25% { background-position: -256px -256px; }
+    37.5% { background-position: -512px -256px; }
+    43.75% { background-position: -768px -256px; }
+    50% { background-position: 0px -512px; }
+    56.25% { background-position: -256px -512px; }
+    62.5% { background-position: -512px -512px; }
+    68.75% { background-position: -768px -512px; }
+    75% { background-position: 0px -768px; }
+    81.25% { background-position: -256px -768px; }
+    87.5% { background-position: -512px -768px; }
+    93.75% { background-position: -768px -768px; }
+    100% { background-position: 0px 0px; }
+}
+                    </pre>
+                </code>
+            </div>
+            <stage>
+                <div class="gd-demo-5" id="demo5"></div>
+                <button class="gd-btn gd-btn-run" id="btnRun5"></button>
+                <h3>Sprite-Sheet-Verschiebung im Detail</h3>
+                <p>Der Rahmen ist stellvertretend für das Anzeigeobjekt oben.</p>
+                <div class="gd-sprite-sheet"><div class="gd-sprite-frame"></div></div>
+            </stage>
+        </section>
+        <button class="gd-btn gd-btn-next" id="btnNext5"></button>
+    </article>
+
+    <script type="text/javascript">
+        const articleCount = 5;
+        for (let i = 0; i <= articleCount; i++) {
+            document.getElementById("btnNext" + i).addEventListener("click", function() {
+                const nextSection = document.getElementById("article" + (i + 1));
+                if (nextSection) {
+                    window.scrollTo(0, nextSection.offsetTop);
+                }
+            });
+        }
+
+        for (let i = 1; i <= articleCount; i++) {
+            document.getElementById("btnRun" + i).addEventListener("click", function() {
+                document.getElementById("demo" + i).classList.toggle("gd-active");
+                if (i === 5) {
+                    document.querySelector(".gd-sprite-sheet").classList.toggle("gd-active");
+                }
+                this.classList.toggle("gd-active");
+            });
+        }
+    </script>
+</body>
+</html>
