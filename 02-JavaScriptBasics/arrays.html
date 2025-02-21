@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Arrays</title>
+    <script type="text/javascript">
+        // ##### Initialization #####
+
+        document.addEventListener("DOMContentLoaded", init);
+
+        
+        function init() {
+            findBentForksWithoutArrays();
+            //findBentForksWithArrays();
+        }
+
+        // ##### Solution without Arrays #####
+
+        const fork1 = "straight";
+        const fork2 = "bent";
+        const fork3 = "straight";
+        const fork4 = "straight";
+        const fork5 = "straight";
+        const fork6 = "bent";
+
+        function findBentForksWithoutArrays() {
+            if (fork1 === "bent") {
+                alert("Gabel 1 ist verbogen.");
+            }
+
+            if (fork2 === "bent") {
+                alert("Gabel 2 ist verbogen.");
+            }
+
+            if (fork3 === "bent") {
+                alert("Gabel 3 ist verbogen.");
+            }
+
+            if (fork4 === "bent") {
+                alert("Gabel 4 ist verbogen.");
+            }
+
+            if (fork5 === "bent") {
+                alert("Gabel 5 ist verbogen.");
+            }
+
+            if (fork6 === "bent") {
+                alert("Gabel 6 ist verbogen.");
+            }
+        }
+
+        // ##### Solution with Arrays #####
+
+        function findBentForksWithArrays() {
+            initializeArray();
+            findBentForksWithArraysAndFor();
+            // findBentForksWithArraysAndForEach();
+            // findBentForksUsingFilter();
+            // findBentForksUsingFind();
+        }
+
+        let forks = null;
+
+        function initializeArray() {
+            forks = []; // Shortcut for "forks = new Array();"
+
+            forks[0] = "straight";
+            forks[1] = "bent";
+            forks[2] = "straight";
+
+            forks.push("straight");
+            forks.push("straight");
+            forks.push("bent");
+        }
+
+        function findBentForksWithArraysAndFor() {
+            for (let i = 0; i < forks.length; i++) {
+                if (forks[i] === "bent") {
+                    alert("Gabel " + (i + 1) + " ist verbogen.");
+                }
+            }
+        }
+
+        function findBentForksWithArraysAndForEach() {
+            for (const fork of forks) {
+                if (fork === "bent") {
+                    alert("Gabel ist verbogen.");
+                }
+            }
+        }
+
+        function findBentForksUsingFilter() {
+            const bentForks = forks.filter(fork => fork === "bent");
+
+            alert("Es gibt " + bentForks.length + " verbogene Gabeln.");
+        }
+
+        function findBentForksUsingFind() {
+            const bentFork = forks.find(fork => fork === "bent");
+
+            if (bentFork !== undefined) {
+                alert("Es gibt mindestens eine verbogene Gabel.");
+            }
+        }
+</script>
+</head>
+<body>
+</body>
+</html>
