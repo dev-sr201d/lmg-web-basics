@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic JavaScript</title>
+    <script type="text/javascript">
+        // ##### Initialization #####
+
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            main();
+        }
+
+        // ##### Core Functions #####
+
+        function main() {
+            
+            let smartHomeB = { temperature: "12°", changeTemperature(newTemperature) { this.temperature = newTemperature; } };
+
+            alert(`Im Haus sind ${smartHomeB.temperature}.`);
+
+            smartHomeB.changeTemperature("20°");
+
+            alert(`Im Haus sind ${smartHomeB.temperature}.`);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
