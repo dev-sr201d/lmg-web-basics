@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Click Events</title>
+    <link rel="stylesheet" type="text/css" href="styles/events.css">
+    <script type="text/javascript">
+
+        // ##### Initialization #####
+
+        document.addEventListener("DOMContentLoaded", init);
+
+        function init() {
+            const button = document.createElement("button");
+            button.textContent = "Click me!";
+            button.type = "button";
+            button.addEventListener("click", onButtonClick);
+            document.body.appendChild(button);
+
+            // const effectArea = document.createElement("div");
+            // effectArea.id = "effectArea";
+            // document.body.appendChild(effectArea);
+        }
+
+        // ##### Event Handlers #####
+
+        function onButtonClick(event) {
+            console.log(event);
+            alert("Button clicked!");
+
+            // const effectArea = document.getElementById("effectArea");
+            // effectArea.style.backgroundColor = "#ccccff";
+        }
+
+</script>
+</head>
+<body>
+</body>
+</html>
